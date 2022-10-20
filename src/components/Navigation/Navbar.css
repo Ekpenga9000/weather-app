@@ -1,0 +1,36 @@
+.logo{
+    font-weight: 600;
+    color: #EA047E;
+    cursor: pointer;
+}
+
+.logo:hover{
+    color: rgba(234, 5, 127, 0.7);
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navitems{
+    display: inline-block;
+    margin-inline:1em;
+    font-weight: 500;
+}
+
+.navitems a {
+    text-decoration: none;
+    color:  #FF6D28;
+}
+
+.navitems a:hover,
+.navitems a:focus{
+    color: rgba(255, 110, 41, .6);
+}
+
+.search input[type="search"]{
+    border-radius: 0.35rem;
+    padding: .3rem .5rem;
+    color: darkgrey;
+}
