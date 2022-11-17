@@ -1,0 +1,3 @@
+const Altdata = { "list": [{ "dt": 1668643200, "main": { "temp": 28.18, "feels_like": 33.41, "temp_min": 25.26, "temp_max": 28.18, "pressure": 1011, "sea_level": 1011, "grnd_level": 1011, "humidity": 85, "temp_kf": 2.92 }, "weather": [{ "id": 800, "main": "Clear", "description": "clear sky", "icon": "01n" }], "clouds": { "all": 3 }, "wind": { "speed": 1.64, "deg": 226, "gust": 3.77 }, "visibility": 10000, "pop": 0, "sys": { "pod": "n" }, "dt_txt": "2022-11-17 00:00:00" }] };
+
+export default Altdata;

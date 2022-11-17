@@ -2,9 +2,9 @@ import React, { useRef, useState, useEffect, useCallback } from "react";
 import { debounce } from "lodash";
 import './App.css';
 import { groupWeatherDates } from "./utils/weather.functions";
-// import Home from './components/home/Home';
+// import Altdata from './components/Altdata';
 
-const API_KEY = "064e46ef54fe58c854a42b2615975636"
+const API_KEY = "064e46ef54fe58c854a42b2615975636"; 
 function App() {
   const [weather, setWeather]=useState({})
   const [isLoading, setIsLoading]=useState(true)
@@ -33,7 +33,9 @@ function App() {
         return response.json();
       })
       .then(data => {
-        // console.log(data);
+        if(!data) return (`Please reload this page`)
+        console.log(data);
+        
         console.log(data.list)
         const weatherData = groupWeatherDates(data.list)
         setWeather({
@@ -41,13 +43,13 @@ function App() {
           mapped: weatherData
         });
         setIsLoading(false);
-        
       })
       .catch(err => {
         setError(err.message);
         setIsLoading(false);
     })
   }, [search])
+  
   return (
     <div className="super-container">
       <div className="container">
@@ -70,13 +72,14 @@ function App() {
             </p>
             
           <div className="Deets-container">
+            <div className="daysoftheweek-container">
             <ul className="daysoftheweek">
               {Object.entries(weather.mapped).map(([key]) => {
 
                 return <li className="day-list" key={key} onClick={() => setActiveDate(key)}> {key} </li>
               })}
             </ul>
-            
+            </div>
               <div className="first-deet">
               {activeDate && weather.mapped[activeDate] ? weather.mapped[activeDate].map((value, index) => {
                 
@@ -93,7 +96,7 @@ function App() {
                     </div>
                   </div>
                 }
-              }): null}
+              }): null }
 
               </div>
             
@@ -117,10 +120,10 @@ function App() {
                 {/* <p style={{ fontSize: "1rem", fontWeight: "700", textAlign: "center", marginBottom:".5em"}}>{value["weather"][0].description}</p> */}
             </div>
           
-          }) : null}
+          }) : `Click on the days to view the weather.`}
           </div> 
 
-        </React.Fragment> : null}
+        </React.Fragment> : null }
         
       </div>  
     </div> 
