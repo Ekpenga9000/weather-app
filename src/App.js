@@ -116,9 +116,7 @@ function App() {
               <img src={`http://openweathermap.org/img/wn/${value["weather"][0].icon}@2x.png`} alt={value["weather"][0].description} />
                 <p style={{ fontWeight: "500", textAlign: "center" }} >{hours} : {newDate.getUTCMinutes()}{newDate.getUTCMinutes()} {amPm}</p>
                 
-                
-                {/* <p style={{ fontSize: "1rem", fontWeight: "700", textAlign: "center", marginBottom:".5em"}}>{value["weather"][0].description}</p> */}
-            </div>
+              </div>
           
           }) : `Click on the days to view the weather.`}
           </div> 

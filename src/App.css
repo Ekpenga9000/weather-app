@@ -6,10 +6,7 @@
 }
 
 body{
-    background: #4949ca;
-
-  /* background: rgb(2,0,36); */
-  /* background: linear-gradient(31deg, rgba(2,0,36,1) 2%, rgba(49,49,99,1) 58%, rgba(151,169,205,1) 100%); */
+    background: #4949ca; 
 }
 
 .super-container{
@@ -24,8 +21,6 @@ body{
   height: 60%;
   padding: 2em;
   border-radius: .25em;
-  /* background: rgb(2,0,36);
-  background: linear-gradient(31deg, rgba(2,0,36,1) 2%, rgba(49,49,99,1) 46%, rgba(23,88,226,1) 100%); */
   background: rgb(61,57,167);
   background: linear-gradient(31deg, rgba(61,57,167,1) 2%, rgba(73,73,202,1) 46%, rgba(31,91,218,1) 100%);
 }
